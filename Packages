@@ -1,0 +1,27 @@
+Package: hello-nas
+Version: 1.0-1
+Depends: 
+Section: utils
+Priority: optional
+Maintainer: x@windows-nas-access
+Architecture: arm_cortex-a9_neon
+Installed-Size: 44
+Filename: bin/hello-nas_1.0-1_arm_cortex-a9_neon.ipk
+Size: 13138
+MD5sum: ff45a8d32d3a78e646a3408060261229
+SHA256sum: 02ea4a80db232c0489cc765c2c1d25129bcb91faf6999c3b34b274db7351fe90
+Description: 動作確認用の最小パッケージ (musl static / Cortex-A9)
+
+Package: openssl-uclibc-bp
+Version: 1.0.2u-2
+Depends: libc, libgcc
+Section: base
+Priority: optional
+Maintainer: x@windows-nas-access
+Architecture: g2
+Installed-Size: 2812
+Filename: bin/openssl-uclibc-bp_1.0.2u-2_g2.ipk
+Size: 1231626
+MD5sum: 584bb5eca83b263943b5439cecc7f397
+SHA256sum: 2326969f420dea7caf1cae1c7276c01b75695907b29fe86a162be806da505d5b
+Description: OpenSSL 1.0.2u + Debian LTS security backports (CVE-2020-1968/1971, CVE-2021-23840/23841/3712, CVE-2022-0778) for NSB-3NR

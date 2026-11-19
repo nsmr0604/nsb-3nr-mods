@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>nsb-3nr-mods opkg feed</title>
+<style>
+body { font-family: sans-serif; max-width: 860px; margin: 2em auto; padding: 0 1em; line-height: 1.6; }
+pre { background: #f4f4f4; padding: 1em; overflow-x: auto; }
+code { background: #f4f4f4; padding: 0 .3em; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ccc; padding: .4em .6em; text-align: left; }
+</style>
+</head>
+<body>
+<h1>nsb-3nr-mods — opkg feed</h1>
+<p>Elecom NSB-3NR (OpenWrt/uClibc ARMv7) 用の自作 ipk 配布ページです。
+ソースとドキュメントは <a href="https://github.com/nsmr0604/nsb-3nr-mods">GitHub リポジトリ</a> を参照してください。</p>
+
+<h2>NAS での設定</h2>
+<pre>
+# /etc/opkg.conf に追加
+src/gz nsb3nr https://nsmr0604.github.io/nsb-3nr-mods/
+
+opkg update
+opkg list | grep openssl-uclibc-bp
+opkg install openssl-uclibc-bp
+</pre>
+
+<h2>公開中のパッケージ</h2>
+<table>
+<tr><th>Package</th><th>Version</th><th>Arch</th><th>説明</th></tr>
+<tr><td>hello-nas</td><td>1.0-1</td><td>arm_cortex-a9_neon</td><td>動作確認用 (musl static)</td></tr>
+<tr><td>openssl-uclibc-bp</td><td>1.0.2u-2</td><td>g2</td><td>OpenSSL 1.0.2u + Debian LTS セキュリティバックポート</td></tr>
+</table>
+
+<p>インデックス: <a href="Packages">Packages</a> / <a href="Packages.gz">Packages.gz</a></p>
+<p><strong>注意</strong>: openssl-uclibc-bp はシステムの libssl を置き換えます。導入前にバックアップしてください。</p>
+</body>
+</html>
