@@ -1,0 +1,15 @@
+# 一時ファイル / ビルド成果物のうち公開不要なもの
+*.log
+*.tmp
+*.err
+nas-webui-cookies*.txt
+nas-*.html
+__pycache__/
+*.pyc
+out/x/
+ipk-build/packages/*/out/x/
+# 認証情報は絶対に置かない
+secret.md
+*secret*.txt
+*.pem
+*.key

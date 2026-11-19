@@ -1,0 +1,12 @@
+pid=
+
+cert = /root/celestial_NAS/stunnel/stunnel.pem
+sslVersion = all 
+foreground = yes
+output = /root/celestial_NAS/stunnel/stunnel.log
+options = NO_SSLv2
+
+[https]
+accept=8443
+connect=8001
+TIMEOUTclose=1
